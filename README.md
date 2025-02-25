@@ -16,7 +16,7 @@ bash
     2. git add analysis.py
     3. git commit -m "Add farewell function"
     4. git push origin feature/greeting
-    5. Pull request and merge done in github online
+    5. Pull request and merge done in github online - Learning: Everytime there is a change/add new feature we need to create a pull request and merge it into main branch and can then delete the feature 
 6. Installed DVC for the first time
 7. Initializing DVC on local
     1. Init DVC
