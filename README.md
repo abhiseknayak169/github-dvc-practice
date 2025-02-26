@@ -26,8 +26,29 @@ bash
                 git merge feature/greeting
         4. Push the changes.
                 git push -u origin main
-6. Installed DVC for the first time
+6. Installed DVC for the first time - pip install dvc was throwing issue thats why installed dvc via downloading executable file from online which added to the path variable
 7. Initializing DVC on local
-    1. Init DVC
+    1. dvc init
+    2. created a folder dvc remote on local directory and added the remote folder to dvc
+    3. dvc remote add -d myremote <location of dvc remote folder>
+    4. pushed the DVC config to remote
+          git add .dvc/config .dvc/.gitignore // gitignore was present inside .dvc folder
+           git commit -m "Configure DVC remote storage"
+           git push origin main
+    6. Tracked dataset data/sample_data.csv
+          dvc add data/sample_data.csv
+          git add data/sample_data.csv.dvc .gitignore
+          git commit -m "Track sample dataset with DVC"
+           git push origin main
+    8. Added new row in data and then updated the dvc tracking and commit and pushed the changes
+    9. Pushed updated data to remote storage
+          dvc push
+    10. Created a new folder as Collaborator
+    11. Cloned the repo
+      git clone https://github.com/abhiseknayak169/github-dvc-practice.git collaborator
+    12. Pull the lastest changes
+    13. Pull the latest data changes using DVC
+    14. Made changes according to the requirement
+    15. Staged, Commit and Pushed changes
 
 '''
